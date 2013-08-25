@@ -15,12 +15,16 @@ TEMPLATE = app
 SOURCES += ../src/main.cpp \
     ../src/main_window.cpp \
     ../src/credit_calculator.cpp \
-    ../src/deposit_calculator.cpp
+    ../src/deposit_calculator.cpp \
+    ../src/credit_calculator_impl.cpp \
+    ../src/money.cpp
 
 HEADERS  += \
     ../src/main_window.h \
     ../src/credit_calculator.h \
-    ../src/deposit_calculator.h
+    ../src/deposit_calculator.h \
+    ../src/credit_calculator_impl.h \
+    ../src/money.h
 
 FORMS    += \
     ../src/new_deposit_account.ui \

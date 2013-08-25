@@ -4,8 +4,9 @@
 #include <QDialog>
 
 namespace Ui {
-class CreditCalculator;
+    class CreditCalculator;
 }
+
 
 class CreditCalculator : public QDialog
 {
