@@ -9,7 +9,6 @@
 class money
 {
 public:
-    typedef std::uint32_t kops_t;
     typedef std::uint64_t value_t;
 
     money();
@@ -52,11 +51,12 @@ public:
     std::istream operator>>(std::istream&) const;
     std::ostream operator<<(std::ostream&) const;
 
-    kops_t kops() const;
+    int kops() const;
     double native() const;
     void round();
+    int code() const;
 
-    std::string to_string(const std::string& thousand_separator = "");
+    std::string to_string(const std::string& thousand_separator = "") const;
 
 private:
     unsigned base_;

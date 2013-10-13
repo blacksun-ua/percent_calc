@@ -1,0 +1,83 @@
+<% layout('../layout') -%>
+<div class="container-fluid">
+   <div class="row-fluid">
+      <div class="span8 block">
+         <div class="row-fluid">
+            <div class="span2 block2"></div>
+            <div class="span2 offset8 block2"></div>
+         </div>
+      </div>
+      <div class="span4 block"></div>
+   </div>
+   <div class="container">
+      <div class="btn-group">
+         <a href="#" class="btn btn-large"><i class="icon-home"></i>Button 1</a>
+         <a href="#" class="btn btn-warning btn-small">Button 2</a>
+         <a href="#" class="btn btn-danger btn-mini">Button 3</a>
+         <a href="#" class="btn btn-success">Button 4</a>
+      </div>
+
+      <div class="btn-group">
+         <a href="#" class="btn btn-info">Button 5</a>
+         <a href="#" class="btn btn-primary">Button 6</a>
+         <a href="#" class="btn btn-inverse">Button 7</a>
+      </div>
+   </div>
+
+<br/></br>
+
+   <div class="container">
+      <div class="btn-group dropup">
+         <a href="#" class="btn dropdown-toggle" data-toggle="dropdown">Button <span class="caret"></span></a>
+         <ul class="dropdown-menu pull-right">
+            <li><a href="#">Link 1</a></li>
+            <li><a href="#">Link 2</a></li>
+            <li><a class="divider"></a></li>
+            <li><a href="#">Link 4</a></li>
+         </ul>
+      </div>
+      <div class="btn-group">
+         <a href="#" class="btn">Button2</a>
+         <a href="#" class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+         <ul class="dropdown-menu">
+            <li><a href="#">Link</li>
+            <li><a href="#">Link</li>
+         </ul>
+      </div>
+
+<br/><br/>
+   <div class="container">
+      <form method="get" action="bla-bla-bla" class="form-inline">
+         <input type="text" class="input-small" name="email" placeholder="enter email"/>
+         <input type="password" class="input-small" name="password" placeholder="enter password"/>
+         <label class="checkbox">
+            <input type="checkbox" name="remember">Remember Me</input>
+         </label>
+         <button type="submit" class="btn btn-info">Enter</button>
+      </form>
+   </div>
+
+<br/><br/>
+   <div class="container">
+      <div class="row">
+         <div class="well span4 offset4">
+            <legend>Authorization</legend>
+            <div class="alert alert-error">
+               <a class="close" href="#submit" data-dissmiss="alert">x</a>Введены неверные данные
+            </div>
+            <form method="POST" accept-character="utf-8">
+               <input type="text" class="span4" placeholder="Enter Login"/>
+               <input type="password" class="span4" placeholder="Enter Password"/>
+               <label class="checkbox">
+                  <input type="checkbox" name="remember" class="align-right">Remember Me</input>
+               </label>
+               <button type="submit" name="submit" class="btn btn-block btn-success">Authorize</button>
+            </form>
+         </div
+      </div>
+   </div>
+
+<br/><br/>
+
+   </div>
+</div>

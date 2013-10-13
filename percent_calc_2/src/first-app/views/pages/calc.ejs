@@ -1,0 +1,72 @@
+<% layout('../layout') -%>
+<h1><%= title %></h1>
+<style>
+th1 {
+    background-color: rgb(101, 101, 101);
+    font-weight: normal;
+    font-size: 15px;
+    padding: 0px 10px;
+    color: rgb(255, 255, 255);
+    text-shadow: 0px 1px 0px rgb(65, 65, 65);
+    line-height: 40px;
+}
+</style>
+
+<div class="container">
+   <div class="container">
+      <form method="POST" novalidate class="form-inline" role="form">
+        <div class="form-group">
+          <label class="sr-only" for="calcInputNum">Sum</label>
+          <input type="text" class="form-control" name="sum" id="calcInputNum" placeholder="тіло" autofocus>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="calcInputFirstPart">First Part</label>
+          <input type="text" class="form-control" name="firstPart" id="calcInputFirstPart" placeholder="перший внесок">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="calcInputPercent">Percent</label>
+          <input type="text" class="form-control" name="percent" id="calcInputPercent" placeholder="відсоткова ставка">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="calcInputPeriod">Period</label>
+          <input type="text" class="form-control" name="period" id="calcInputPeriod" placeholder="термін">
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="calcInputType">Type</label>
+          <select class="form-control" name="type" id="calcInputType">
+            <option selected value="classic">класика</option>
+            <option value="annuitet">ануітет</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary">порахувати</button>
+      </form>
+   </div>
+<br/>
+
+   <div class="container">
+      <table class="table table-hover table-striped table-bordered table-condensed">
+      <thead>
+         <tr>
+            <th>Період</th>
+            <th>Залишок</th>
+            <th>Тіло кредиту</th>
+            <th>Відсотки</th>
+            <th>Загалом</th>
+         </tr>
+        </thead>
+         <tbody>
+         <% for(var i=0; i<months.length; ++i) { var m = months[i]; %>
+            <tr>
+               <td><%= m.month_number %></td>
+               <td><%= m.remain %></td>
+               <td><%= m.body_payment %></td>
+               <td><%= m.percent_payment %></td>
+               <td><%= m.total %></td>
+            </tr>
+         <% } %>
+         </tbody>
+      </table>
+      <p>Total persents: <%= total_percents %></p>
+      <p>Total payment: <%= total_payment %><p/>
+   </div>
+</div>
